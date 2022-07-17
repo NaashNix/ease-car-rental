@@ -7,5 +7,6 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
+# Target Folder
 /Car_Rental/target
-/Car_Rental/.git
+
