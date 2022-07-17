@@ -6,4 +6,6 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
 /Car_Rental/target
+/Car_Rental/.git
