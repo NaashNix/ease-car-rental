@@ -6,4 +6,6 @@ public interface CustomerService {
 
     public boolean saveCustomer(CustomerDTO dto);
 
+    public void updateCustomer(CustomerDTO dto);
+
 }

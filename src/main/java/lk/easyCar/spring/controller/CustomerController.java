@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.attribute.standard.Media;
+
 @RestController
 @RequestMapping("app/customer")
 @CrossOrigin
@@ -21,5 +23,11 @@ public class CustomerController {
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customer){
         boolean b = service.saveCustomer(customer);
         return new ResponseUtil(200,"saved", ErrorMessage.CUSTOMER_SAVED);
+    }
+
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO customer){
+        service.updateCustomer(customer);
+        return new ResponseUtil(200,"updated",ErrorMessage.CUSTOMER_UPDATED);
     }
 }

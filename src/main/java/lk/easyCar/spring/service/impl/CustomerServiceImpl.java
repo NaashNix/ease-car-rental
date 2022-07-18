@@ -28,4 +28,14 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
+    public void updateCustomer(CustomerDTO dto) {
+        if (repo.existsById(dto.getCustomerID())) {
+
+            repo.save(mapper.map(dto, Customer.class));
+
+        } else {
+            throw new RuntimeException("No Such Customer To Update..! Please Check the ID..!");
+        }
+    }
+
 }
