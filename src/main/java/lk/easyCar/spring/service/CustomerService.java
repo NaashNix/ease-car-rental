@@ -8,4 +8,6 @@ public interface CustomerService {
 
     public void updateCustomer(CustomerDTO dto);
 
+    public void deleteCustomer(String id);
+
 }

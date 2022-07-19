@@ -22,12 +22,19 @@ public class CustomerController {
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customer){
         boolean b = service.saveCustomer(customer);
-        return new ResponseUtil(200,"saved", ErrorMessage.CUSTOMER_SAVED);
+        return new ResponseUtil(200,"saved", null);
     }
 
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customer){
         service.updateCustomer(customer);
-        return new ResponseUtil(200,"updated",ErrorMessage.CUSTOMER_UPDATED);
+        return new ResponseUtil(200,"updated",null);
     }
+
+    @DeleteMapping(produces = MediaType.APPLICATION_JSON_VALUE , params = {"customerID"})
+    public ResponseUtil deleteCustomer(@RequestParam String customerID){
+        service.deleteCustomer(customerID);
+        return new ResponseUtil(200,"Successfully Deleted",null);
+    }
+
 }

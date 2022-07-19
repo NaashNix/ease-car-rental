@@ -38,6 +38,13 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
+    public void deleteCustomer(String id) {
+        if (repo.existsById(id)){
+            repo.deleteById(id);
+        }else{
+            throw new RuntimeException("No such a customer");
+        }
+    }
 
 
 }
