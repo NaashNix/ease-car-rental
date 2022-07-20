@@ -1,13 +1,18 @@
 package lk.easyCar.spring.service.impl;
 
+import antlr.Token;
+import lk.easyCar.spring.dto.CarDTO;
 import lk.easyCar.spring.dto.CustomerDTO;
 import lk.easyCar.spring.entity.Customer;
 import lk.easyCar.spring.repo.CustomerRepo;
 import lk.easyCar.spring.service.CustomerService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -44,6 +49,10 @@ public class CustomerServiceImpl implements CustomerService {
         }else{
             throw new RuntimeException("No such a customer");
         }
+    }
+
+    public List<CustomerDTO> getAllCustomers() {
+        return mapper.map(repo.findAll(),new TypeToken<CustomerDTO>(){}.getType());
     }
 
 
