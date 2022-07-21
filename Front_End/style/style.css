@@ -1,0 +1,18 @@
+#main-logo{
+    /* height: 3rem; */
+    width: 12rem;
+}
+
+.menu-bar-text{
+    font-family: 'Inter',sans-serif;
+    color: black;
+}
+
+.navbar-nav > li > a.active{
+    color: #D33435 !important;
+    font-weight: 700;
+}
+
+#quick-booking-form-container {
+    background-color: #D33435;
+}
