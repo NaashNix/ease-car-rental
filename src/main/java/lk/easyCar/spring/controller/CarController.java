@@ -6,6 +6,7 @@ import lk.easyCar.spring.service.CarService;
 import lk.easyCar.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -37,6 +38,12 @@ public class CarController {
     public ResponseUtil deleteVehicle(@RequestParam String carID){
         service.deleteVehicle(carID);
         return new ResponseUtil(200,"Successfully Deleted",null);
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE, params = {"reqDate","retDate"})
+    public ResponseUtil getAvailableVehiclesOnDate(@RequestParam String reqDate, @RequestParam String retDate){
+
+        return null;
     }
 
 }

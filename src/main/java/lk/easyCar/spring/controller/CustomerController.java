@@ -37,4 +37,8 @@ public class CustomerController {
         return new ResponseUtil(200,"Successfully Deleted",null);
     }
 
+    @GetMapping(path = "/{customerID}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCustomer(@PathVariable String customerID) {
+        return new ResponseUtil(200, "Ok", service.searchCustomerByID(customerID));
+    }
 }

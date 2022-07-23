@@ -55,5 +55,8 @@ public class CustomerServiceImpl implements CustomerService {
         return mapper.map(repo.findAll(),new TypeToken<CustomerDTO>(){}.getType());
     }
 
+    public CustomerDTO searchCustomerByID(String customerID){
+        return mapper.map(repo.findById(customerID),CustomerDTO.class);
+    }
 
 }
