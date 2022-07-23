@@ -15,11 +15,9 @@ import java.sql.Time;
 @Data
 @ToString
 @Entity
-@IdClass(OrderKey.class)
-public class Order {
+public class InRental {
     @Id
     private String orderID;
-    @Id
     private String reqOrderID;
     private Status orderStatus;
     private int carPreMeterReading;

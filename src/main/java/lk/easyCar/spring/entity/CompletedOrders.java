@@ -13,12 +13,10 @@ import java.sql.Time;
 @NoArgsConstructor
 @Data
 @ToString
-//@Entity
-//@IdClass(CompletedOrderKey.class)
+@Entity
 public class CompletedOrders {
     @Id
     private String completedOrderID;
-    @Id
     private String orderID;
     private Time returnedTime;
     private Date returnedDate;
@@ -31,5 +29,5 @@ public class CompletedOrders {
 
     @OneToOne
     @JoinColumn(name = "orderID", referencedColumnName = "orderID", insertable = false, updatable = false)
-    private Order order;
+    private InRental inRental;
 }
