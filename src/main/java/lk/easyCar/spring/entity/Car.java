@@ -28,4 +28,5 @@ public class Car {
     double dailyRate;
     double monthlyRate;
     double priceForExtraMile;
+
 }

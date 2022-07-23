@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("app/booking")
 @CrossOrigin
 public class BookingController {
+
     @PostMapping
-    public void placeABooking( ){
+    public void placeABooking(){
 
     }
 }

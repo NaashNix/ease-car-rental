@@ -5,17 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Data
-@Entity
-public class RequestedOrder {
-    @Id
-    private String inquireID;
-    private String carID;
-
+@ToString
+public class OrderKey implements Serializable {
+    String reqOrderID;
 }
