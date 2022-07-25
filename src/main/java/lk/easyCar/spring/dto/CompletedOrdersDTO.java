@@ -1,21 +1,18 @@
-package lk.easyCar.spring.entity;
+package lk.easyCar.spring.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @ToString
-@Entity
-public class CompletedOrders {
-    @Id
+@Data
+public class CompletedOrdersDTO {
     private String completedOrderID;
     private String orderID;
     private Time returnedTime;
@@ -25,10 +22,4 @@ public class CompletedOrders {
     private double rentalPrice;
     private double extraTimeCharge;
     private double debitedWaiverAmount;
-
-
-
-    @OneToOne
-    @JoinColumn(name = "orderID", referencedColumnName = "orderID", insertable = false, updatable = false)
-    private InRental inRental;
 }

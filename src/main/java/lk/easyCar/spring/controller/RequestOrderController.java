@@ -1,17 +1,18 @@
 package lk.easyCar.spring.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.easyCar.spring.dto.OrderRequestDTO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/booking")
 @CrossOrigin
 public class RequestOrderController {
 
+
+
     @PostMapping
-    public void requestOrder(){
+    public void requestOrder(@ModelAttribute OrderRequestDTO dto){
+        // Here goes the
 
     }
 
