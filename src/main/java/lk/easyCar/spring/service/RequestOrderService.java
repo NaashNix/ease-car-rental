@@ -9,7 +9,7 @@ public interface RequestOrderService {
     public void saveRequestOrder(OrderRequestDTO dto);
     public void deleteRequestOrder(String reqOrderID);
     public void updateRequestOrder(OrderRequestDTO dto);
-    public void searchRequestOrder(String reqOrderID);
+    public OrderRequestDTO searchRequestOrder(String reqOrderID);
     public List<OrderRequestDTO> getAllRequestOrder();
 
 }

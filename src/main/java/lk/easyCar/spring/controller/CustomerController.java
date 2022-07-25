@@ -18,6 +18,11 @@ public class CustomerController {
     @Autowired
     CustomerService service;
 
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCustomers() {
+        return new ResponseUtil(200, "Ok", service.getAllCustomers());
+    }
+
     // Customer Control
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customer){
