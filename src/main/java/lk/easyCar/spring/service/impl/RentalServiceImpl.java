@@ -5,6 +5,7 @@ import lk.easyCar.spring.dto.RentalDTO;
 import lk.easyCar.spring.entity.InRental;
 import lk.easyCar.spring.repo.RentalRepo;
 import lk.easyCar.spring.service.RentalService;
+import lk.easyCar.spring.service.RequestOrderService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,11 @@ public class RentalServiceImpl implements RentalService {
     @Autowired
     RentalRepo repo;
 
+    RequestOrderService requestOrderService;
+
 
     public void saveRental(RentalDTO dto) {
+        requestOrderService.setStatusToInJourney(dto.getReqOrderID());
         if (!repo.existsById(dto.getOrderID())) {
             repo.save(mapper.map(dto, InRental.class));
         } else {

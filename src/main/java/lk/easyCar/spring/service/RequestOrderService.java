@@ -11,5 +11,6 @@ public interface RequestOrderService {
     public void updateRequestOrder(OrderRequestDTO dto);
     public OrderRequestDTO searchRequestOrder(String reqOrderID);
     public List<OrderRequestDTO> getAllRequestOrder();
-
+    public void setStatusToApproved(String reqOrderID);
+    public void setStatusToInJourney(String reqOrderID);
 }

@@ -50,6 +50,12 @@ public class RequestOrderController {
         return new ResponseUtil(200, "Ok", service.searchRequestOrder(reqOrderID));
     }
 
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil setStatusToApproved(String reqOrderID){
+        service.setStatusToApproved(reqOrderID);
+        return new ResponseUtil(200,"set-approved",null);
+    }
+
 
 
 }
