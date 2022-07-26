@@ -1,9 +1,7 @@
 package lk.easyCar.spring.controller;
 
-import lk.easyCar.spring.dto.OrderRequestDTO;
 import lk.easyCar.spring.dto.RentalDTO;
 import lk.easyCar.spring.service.RentalService;
-import lk.easyCar.spring.service.RequestOrderService;
 import lk.easyCar.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
