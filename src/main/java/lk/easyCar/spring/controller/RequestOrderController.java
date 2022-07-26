@@ -1,6 +1,6 @@
 package lk.easyCar.spring.controller;
 
-import lk.easyCar.spring.dto.CustomerDTO;
+
 import lk.easyCar.spring.dto.OrderRequestDTO;
 import lk.easyCar.spring.service.RequestOrderService;
 import lk.easyCar.spring.util.ResponseUtil;
@@ -19,7 +19,7 @@ public class RequestOrderController {
     RequestOrderService service;
 
     @PostMapping
-    public ResponseUtil requestOrder(@ModelAttribute OrderRequestDTO dto){
+    public ResponseUtil saveRequestOrder(@ModelAttribute OrderRequestDTO dto){
         // Here goes the
         service.saveRequestOrder(dto);
         return new ResponseUtil(200,"saved",null);
@@ -49,5 +49,7 @@ public class RequestOrderController {
     public ResponseUtil searchRequestedOrder(@PathVariable String reqOrderID) {
         return new ResponseUtil(200, "Ok", service.searchRequestOrder(reqOrderID));
     }
+
+
 
 }
