@@ -70,7 +70,7 @@ public class CompletedOrdersImpl implements CompletedOrderService {
     }
 
     public List<CompletedOrdersDTO> getAllCompletedOrder() {
-        return mapper.map(repo.findAll(), new TypeToken<CompletedOrdersDTO>() {
+        return mapper.map(repo.findAll(), new TypeToken<List<CompletedOrdersDTO>>() {
         }.getType());
     }
 }

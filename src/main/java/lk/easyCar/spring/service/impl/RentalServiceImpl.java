@@ -73,7 +73,7 @@ public class RentalServiceImpl implements RentalService {
     }
 
     public List<RentalDTO> getAllRentals() {
-        return mapper.map(repo.findAll(), new TypeToken<RentalDTO>() {
+        return mapper.map(repo.findAll(), new TypeToken<List<RentalDTO>>() {
         }.getType());
     }
 }

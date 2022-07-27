@@ -52,7 +52,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     public List<CustomerDTO> getAllCustomers() {
-        return mapper.map(repo.findAll(),new TypeToken<CustomerDTO>(){}.getType());
+        return mapper.map(repo.findAll(),new TypeToken<List<CustomerDTO>>(){}.getType());
     }
 
     public CustomerDTO searchCustomerByID(String customerID){

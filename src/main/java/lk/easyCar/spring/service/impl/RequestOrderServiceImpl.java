@@ -81,7 +81,7 @@ public class RequestOrderServiceImpl implements RequestOrderService {
     }
 
     public List<OrderRequestDTO> getAllRequestOrder() {
-        return mapper.map(repo.findAll(), new TypeToken<OrderRequestDTO>() {
+        return mapper.map(repo.findAll(), new TypeToken<List<OrderRequestDTO>>() {
         }.getType());
     }
 }
