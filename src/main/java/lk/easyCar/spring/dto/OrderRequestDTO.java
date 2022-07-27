@@ -1,6 +1,5 @@
 package lk.easyCar.spring.dto;
 
-import lk.easyCar.spring.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,5 +22,5 @@ public class OrderRequestDTO {
     private Date expectedReturnDate;
     private Time expectedReturnTime;
     private double waiverAmount;
-    private Status orderStatus;
+    private String orderStatus;
 }

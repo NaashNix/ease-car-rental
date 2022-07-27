@@ -3,7 +3,9 @@ package lk.easyCar.spring.service.impl;
 
 import lk.easyCar.spring.dto.RentalDTO;
 import lk.easyCar.spring.entity.InRental;
+import lk.easyCar.spring.entity.OrderRequest;
 import lk.easyCar.spring.repo.RentalRepo;
+import lk.easyCar.spring.repo.RequestOrderRepo;
 import lk.easyCar.spring.service.RentalService;
 import lk.easyCar.spring.service.RequestOrderService;
 import org.modelmapper.ModelMapper;
@@ -23,11 +25,22 @@ public class RentalServiceImpl implements RentalService {
     @Autowired
     RentalRepo repo;
 
+    @Autowired
+    RequestOrderRepo reqOrdRepo;
+
     RequestOrderService requestOrderService;
 
 
     public void saveRental(RentalDTO dto) {
-        requestOrderService.setStatusToInJourney(dto.getReqOrderID());
+        if (reqOrdRepo.existsById(dto.getReqOrderID())) {
+            OrderRequest orderRequest = reqOrdRepo.findById(dto.getReqOrderID()).get();
+            orderRequest.setOrderStatus("IN_DRIVE");
+            reqOrdRepo.save(orderRequest);
+
+        }else{
+            throw new RuntimeException("RentalService.saveRental.reqOrderRepo.returns=false");
+        }
+
         if (!repo.existsById(dto.getOrderID())) {
             repo.save(mapper.map(dto, InRental.class));
         } else {

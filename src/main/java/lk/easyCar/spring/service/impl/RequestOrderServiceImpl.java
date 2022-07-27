@@ -2,6 +2,7 @@ package lk.easyCar.spring.service.impl;
 
 
 import lk.easyCar.spring.dto.OrderRequestDTO;
+import lk.easyCar.spring.dto.RentalDTO;
 import lk.easyCar.spring.entity.OrderRequest;
 import lk.easyCar.spring.repo.RequestOrderRepo;
 import lk.easyCar.spring.service.RequestOrderService;
@@ -24,25 +25,24 @@ public class RequestOrderServiceImpl implements RequestOrderService {
     @Autowired
     RequestOrderRepo repo;
 
-    public void setStatusToApproved(String reqOrderID) {
-        if (repo.findById(reqOrderID).isPresent()){
-            OrderRequest orderRequest = repo.findById(reqOrderID).get();
-            orderRequest.setOrderStatus(Status.APPROVED);
-            repo.save(orderRequest);
-        }else{
-            throw new RuntimeException("no requested order from that ID");
-        }
 
-    }
 
     @Override
-    public void setStatusToInJourney(String reqOrderID) {
-        if (repo.findById(reqOrderID).isPresent()){
+    public void updateOrderStatusByAdmin(String reqOrderID, String status) {
+        if (repo.existsById(reqOrderID)) {
             OrderRequest orderRequest = repo.findById(reqOrderID).get();
-            orderRequest.setOrderStatus(Status.IN_JOURNEY);
+            if (status.equals("APPROVED")){
+                orderRequest.setOrderStatus("APPROVED");
+            }else if (status.equals("REJECTED")){
+                orderRequest.setOrderStatus("REJECTED");
+            }else{
+                orderRequest.setOrderStatus("PENDING");
+            }
+
             repo.save(orderRequest);
+
         }else{
-            throw new RuntimeException("no requested order from that ID");
+            throw new RuntimeException("reqOrderID not found");
         }
     }
 

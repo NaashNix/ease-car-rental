@@ -18,6 +18,17 @@ public class RequestOrderController {
     @Autowired
     RequestOrderService service;
 
+
+    @PutMapping(params = {"reqOrderID","status"})
+    public ResponseUtil approveOrRejectOrders(
+            @RequestParam String reqOrderID,
+            @RequestParam String status
+    ){
+
+        service.updateOrderStatusByAdmin(reqOrderID,status);
+        return new ResponseUtil(200,"",null);
+    }
+
     @PostMapping
     public ResponseUtil saveRequestOrder(@ModelAttribute OrderRequestDTO dto){
         // Here goes the
@@ -49,13 +60,5 @@ public class RequestOrderController {
     public ResponseUtil searchRequestedOrder(@PathVariable String reqOrderID) {
         return new ResponseUtil(200, "Ok", service.searchRequestOrder(reqOrderID));
     }
-
-    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil setStatusToApproved(String reqOrderID){
-        service.setStatusToApproved(reqOrderID);
-        return new ResponseUtil(200,"set-approved",null);
-    }
-
-
 
 }

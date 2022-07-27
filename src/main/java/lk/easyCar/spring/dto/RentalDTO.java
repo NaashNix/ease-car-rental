@@ -1,6 +1,5 @@
 package lk.easyCar.spring.dto;
 
-import lk.easyCar.spring.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +15,7 @@ import java.sql.Time;
 public class RentalDTO {
     private String orderID;
     private String reqOrderID;
-    private Status orderStatus;
+    private String orderStatus;
     private int carPreMeterReading;
     private Date pickedUpDate;
     private Time pickedUpTime;

@@ -1,6 +1,5 @@
 package lk.easyCar.spring.entity;
 
-import lk.easyCar.spring.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +18,7 @@ public class InRental {
     @Id
     private String orderID;
     private String reqOrderID;
-    private Status orderStatus;
+    private String orderStatus;
     private int carPreMeterReading;
     private Date pickedUpDate;
     private Time pickedUpTime;

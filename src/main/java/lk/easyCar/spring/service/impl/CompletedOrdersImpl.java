@@ -5,6 +5,7 @@ import lk.easyCar.spring.dto.RentalDTO;
 import lk.easyCar.spring.entity.CompletedOrders;
 import lk.easyCar.spring.entity.InRental;
 import lk.easyCar.spring.repo.CompletedOrderRepo;
+import lk.easyCar.spring.repo.RentalRepo;
 import lk.easyCar.spring.service.CompletedOrderService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -24,7 +25,19 @@ public class CompletedOrdersImpl implements CompletedOrderService {
     @Autowired
     CompletedOrderRepo repo;
 
+    @Autowired
+    RentalRepo rentalRepo;
+
     public void saveCompletedOrder(CompletedOrdersDTO dto) {
+
+        if (rentalRepo.existsById(dto.getOrderID())){
+            InRental inRental = rentalRepo.findById(dto.getOrderID()).get();
+            inRental.setOrderStatus("COMPLETED");
+            rentalRepo.save(inRental);
+        }else{
+            throw new RuntimeException("CompletedOrdersImpl.save.saveCompletedOrder.return=false");
+        }
+
         if (!repo.existsById(dto.getOrderID())) {
             repo.save(mapper.map(dto, CompletedOrders.class));
         } else {
