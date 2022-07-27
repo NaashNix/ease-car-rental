@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/orders")
+@RequestMapping("app/orders")
 @CrossOrigin
 public class CompletedOrdersController {
     @Autowired

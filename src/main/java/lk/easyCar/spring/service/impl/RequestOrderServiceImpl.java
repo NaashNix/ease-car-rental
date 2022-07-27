@@ -64,10 +64,10 @@ public class RequestOrderServiceImpl implements RequestOrderService {
     }
 
     public void updateRequestOrder(OrderRequestDTO dto) {
-        if (repo.existsById(dto.getCarID())) {
+        if (repo.existsById(dto.getReqOrderID())) {
             repo.save(mapper.map(dto, OrderRequest.class));
         } else {
-            throw new RuntimeException("Order ID already saved!");
+            throw new RuntimeException("OrderID not found!");
         }
     }
 

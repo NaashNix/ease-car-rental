@@ -20,8 +20,8 @@ public class InRental {
     private String reqOrderID;
     private String orderStatus;
     private int carPreMeterReading;
-    private Date pickedUpDate;
     private Time pickedUpTime;
+    private Date pickedUpDate;
     private String specialNotice;
 
     @OneToOne

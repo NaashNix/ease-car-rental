@@ -26,7 +26,7 @@ public class RequestOrderController {
     ){
 
         service.updateOrderStatusByAdmin(reqOrderID,status);
-        return new ResponseUtil(200,"",null);
+        return new ResponseUtil(200,status+", set to the order",null);
     }
 
     @PostMapping
