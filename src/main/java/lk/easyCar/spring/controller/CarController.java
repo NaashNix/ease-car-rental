@@ -32,7 +32,7 @@ public class CarController {
         return new ResponseUtil(200,"updated",null);
     }
 
-    @DeleteMapping(produces = MediaType.APPLICATION_JSON_VALUE , params = {"customerID"})
+    @DeleteMapping(produces = MediaType.APPLICATION_JSON_VALUE , params = {"carID"})
     public ResponseUtil deleteVehicle(@RequestParam String carID){
         service.deleteVehicle(carID);
         return new ResponseUtil(200,"Successfully Deleted",null);
@@ -43,6 +43,7 @@ public class CarController {
 
         return null;
     }
+
 
 
 

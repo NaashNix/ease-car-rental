@@ -56,7 +56,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     public CustomerDTO searchCustomerByID(String customerID){
-        return mapper.map(repo.findById(customerID),CustomerDTO.class);
+        if (repo.findById(customerID).isPresent()) {
+            Customer customer = repo.findById(customerID).get();
+            return mapper.map(customer,CustomerDTO.class);
+        }else{
+            throw new RuntimeException("customerID is wrong!");
+        }
+
     }
 
 }

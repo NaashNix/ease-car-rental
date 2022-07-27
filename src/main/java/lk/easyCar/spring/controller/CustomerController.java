@@ -20,6 +20,7 @@ public class CustomerController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllCustomers() {
+
         return new ResponseUtil(200, "Ok", service.getAllCustomers());
     }
 

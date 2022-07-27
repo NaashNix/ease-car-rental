@@ -1,6 +1,7 @@
 package lk.easyCar.spring.service;
 
 import lk.easyCar.spring.dto.CarDTO;
+import lk.easyCar.spring.dto.CustomerDTO;
 import lk.easyCar.spring.dto.DriverDTO;
 
 import java.util.List;
@@ -14,4 +15,6 @@ public interface DriverService {
     void updateDriver(DriverDTO dto);
 
     void deleteDrivers(String driverID);
+
+    DriverDTO searchDriverByID (String driverID);
 }
