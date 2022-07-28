@@ -1,18 +1,124 @@
-#main-logo{
-    /* height: 3rem; */
-    width: 12rem;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.menu-bar-text{
-    font-family: 'Inter',sans-serif;
+#main-logo {
+  width: 8rem;
+}
+
+#main-nav-bar a {
+  color: black !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+#main-nav-bar a:active {
+  color: red !important;
+}
+
+#main-nav-bar a:hover,
+#main-nav-bar a:focus {
+  color: red !important;
+}
+
+#navbarSupportedContent {
+  justify-content: flex-end  !important;
+}
+
+#login-form-parent{
+    position: absolute !important;
+    z-index: 5;
+    background-color: #ecf0f1;
+    padding: 2rem;
+    right: 3rem;
+}
+
+#login-form-parent label{
     color: black;
+    font-family: 'Roboto',sans-serif;
 }
 
-.navbar-nav > li > a.active{
-    color: #D33435 !important;
-    font-weight: 700;
+#login-form-parent span{
+    margin-bottom: 2rem;
 }
 
-#quick-booking-form-container {
-    background-color: #D33435;
+#company-details-section{
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+    
+}
+
+
+#details-para h1{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+
+}
+
+#details-para span{
+    font-family: 'Roboto',sans-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.company-details-dash{
+    
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+    height: 0.2em;
+    background-color: #7f8c8d;
+}
+
+#company-det-features h1{
+    color: #2980b9;
+    margin-bottom: 0;
+}
+
+#company-det-features button{
+    width: 60%;
+    margin-top: 3rem;
+    
+}
+
+#main-services-section div.row > div:first-child{
+    color: white;
+    padding: 3rem;
+    background-color: #081f35;
+}
+
+#main-services-section div.row > div:first-child{
+    background-color: #081f35;
+}
+
+.services-cards{
+    padding: 0 !important;
+    position: relative;
+}
+
+.services-cards>img{
+    width: 100%;
+
+}
+
+.services-cards h4{
+    position: absolute;
+    z-index: 10;
+    color: white;
+    bottom: 1rem;
+    left: 1.5rem;
+    text-shadow: 2px 3px 3px black;
+}
+
+footer{
+    margin-top: 7rem;
+    background-color: #080f15;
 }
