@@ -11,7 +11,7 @@
     width: 100%;
 }
 
-#create-account-form-parent{
+#create-account-form-parent, #id-upload-form-parent{
     margin-top: 6rem;
     /* margin-bottom: 10rem; */
     margin-left: 10rem;
@@ -27,12 +27,14 @@
     background-color: #4b4b4b;
 }
 
-#create-account-form-parent .field-head{
+#create-account-form-parent .field-head,#id-upload-form-parent .field-head{
     font-family: 'Poppins',sans-serif;
     font-weight: 500;
 }
 
-#create-account-form-parent .container-fluid h4{
+#create-account-form-parent .container-fluid h4,
+#id-upload-form-parent .container-fluid h4
+{
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
 }
@@ -44,4 +46,22 @@
     top: 0;
     bottom: 0;
     /* margin: 1rem auto; */
+}
+
+#next-button button{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+
+.horizTranslate {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+.verticalIntro{
+    display: block !important;
 }

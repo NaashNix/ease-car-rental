@@ -138,21 +138,21 @@
                             <label class="form-label field-head" for="">Gender</label>
                             <div class="input-group" style="justify-content: space-around;">
                                 <div style=" justify-content: center;">
-                                    <input class="form-check-input gender-male-radio" style="border-radius: 100%;" type="radio"
-                                        value="" >
+                                    <input class="form-check-input gender-male-radio" style="border-radius: 100%;"
+                                        type="radio" value="">
                                     <label class="form-label field-head" for="gender-male-radio">Male</label>
                                 </div>
                                 <div>
-                                    <input class="form-check-input gender-male-radio" style="border-radius: 100%;" type="radio"
-                                        value="">
+                                    <input class="form-check-input gender-male-radio" style="border-radius: 100%;"
+                                        type="radio" value="">
                                     <label class="form-label field-head" for="gender-female-radio">Female</label>
                                 </div>
-
-
-
                             </div>
                         </div>
-
+                        
+                        <div id="next-button" style="display: flex; justify-content: flex-end;">
+                            <button class="btn btn-primary" onclick="loadIdImageUploadPage()" type="button">NEXT</button>
+                        </div>
 
                     </div>
 
@@ -160,6 +160,35 @@
             </div>
 
         </section>
+
+        <section id="id-upload-form-parent">
+            <div class="container-fluid">
+                <div class="row mb-3">
+                <div class="col">
+                    <h1 style="display: inline !important;">Verifying Identity</h1>
+                    <h4 style="display: inline !important; float: right;">(Step 2/3)</h4>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="nic-front-image" class="form-label">Front Side of the NIC</label>
+                            <input class="form-control" type="file" id="nic-front-image">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nic-back-image" class="form-label">Back Side of the NIC</label>
+                            <input class="form-control" type="file" id="nic-back-image">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
