@@ -31,3 +31,17 @@
     font-family: 'Poppins',sans-serif;
     font-weight: 500;
 }
+
+#create-account-form-parent .container-fluid h4{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+}
+
+
+.gender-male-radio{
+    margin-right: 1rem;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    /* margin: 1rem auto; */
+}
