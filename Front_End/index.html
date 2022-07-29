@@ -82,7 +82,7 @@
 
     <!-- login form section -->
     <section id="login-form-parent">
-      <div>
+      <div >
         <form action="#">
 
           <span>
@@ -93,20 +93,20 @@
             </svg>
             Please login before placing order.</span>
           <div class="mb-3 mt-3">
-            <label for="exampleInputEmail1" class="form-label">User Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="userNameField" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="userNameField" aria-describedby="emailHelp" required>
             <div id="emailHelp" class="form-text">Capital and simple letters matters.</div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="passwordField" class="form-label">Password</label>
+            <input type="password" class="form-control" id="passwordField" required>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Keep Me Logged-in</label>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
-          <button type="submit" class="btn btn-secondary">Sign Up</button>
+          <button type="submit" class="btn btn-primary" onclick="loginButtonClicked()">Login</button>
+          <button type="button" href="" onclick="location.href='./createAccount.html' " class="btn btn-secondary">Sign Up</button>
         </form>
       </div>
     </section>
@@ -260,7 +260,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
     crossorigin="anonymous"></script>
-  <script src="./scripts/script.js" async defer></script>
+  <script src="./scripts/guest_page.js" async defer></script>
 
 </body>
 
