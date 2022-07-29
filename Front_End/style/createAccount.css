@@ -27,7 +27,7 @@
     background-color: #4b4b4b;
 }
 
-#create-account-form-parent .field-head,#id-upload-form-parent .field-head{
+#create-account-form-parent .field-head, #id-upload-form-parent .field-head{
     font-family: 'Poppins',sans-serif;
     font-weight: 500;
 }
