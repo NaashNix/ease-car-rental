@@ -65,4 +65,16 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
+    public String getNextCustomerID (){
+        int lastIDint;
+        String lastCustomerID = repo.getLastCustomerID();
+        if (lastCustomerID != null){
+            lastIDint = (Integer.parseInt(lastCustomerID.substring(2)));
+            return String.format("C%03d",++lastIDint);
+        }else{
+            return "C001";
+        }
+
+    }
+
 }
