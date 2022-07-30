@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/createAccount.css">
     <link rel="stylesheet" href="./style/guest_page.css">
     <link rel="stylesheet" href="./libs/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -149,9 +150,10 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div id="next-button" style="display: flex; justify-content: flex-end;">
-                            <button class="btn btn-primary" onclick="loadIdImageUploadPage()" type="button">NEXT</button>
+                            <button class="btn btn-primary" onclick="loadIdImageUploadPage()"
+                                type="button">NEXT</button>
                         </div>
 
                     </div>
@@ -164,10 +166,10 @@
         <section id="id-upload-form-parent">
             <div class="container-fluid">
                 <div class="row mb-3">
-                <div class="col">
-                    <h1 style="display: inline !important;">Verifying Identity</h1>
-                    <h4 style="display: inline !important; float: right;">(Step 2/3)</h4>
-                </div>
+                    <div class="col">
+                        <h1 style="display: inline !important;">Verifying Identity</h1>
+                        <h4 style="display: inline !important; float: right;">(Step 2/3)</h4>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
@@ -175,12 +177,12 @@
                     </div>
                     <div class="col">
                         <div class="mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up-fill"
-                            viewBox="0 0 16 16">
-                            <path
-                            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z" />
-                        </svg>
-                        <span>Please Upload Clear Images.</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z" />
+                            </svg>
+                            <span>Please Upload Clear Images.</span>
                         </div>
                         <div class="mb-3">
                             <label for="nic-front-image" class="form-label field-head">Front Side of the NIC</label>
@@ -194,12 +196,79 @@
 
                     </div>
                 </div>
-                <div class="row" style="display: flex; justify-content: flex-end;">
-                    <button class="btn btn-primary w-25">NEXT</button>
+                <div class="row" style="display: flex; justify-content: flex-end    ;">
+                    <button class="btn btn-primary w-25" onclick="loadCredentialSettingPage()">NEXT</button>
                 </div>
             </div>
         </section>
 
+        <section id="credential-setting-form" style="padding-bottom: 0.5rem;">
+            <div class="container-fluid">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h1 style="display: inline !important;">Login Credentials</h1>
+                        <h4 style="display: inline !important; float: right;">(Step 3/3)</h4>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div>
+                            <img src="./res/images/password-username-form-image.jpg"
+                                style="width: 100%; margin-left: 2rem;" alt="">
+                        </div>
+
+                    </div>
+                    <div class="col">
+
+                        <div class="mb-4" style="font-family: 'Poppins',sans-serif; font-weight: 400;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-info-circle-fill text-primary" style="display: inline;"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg>
+                            <h6 style="display: inline;">Please enter only (A-Z,0-9) Characters.</h6>
+                        </div>
+
+                        <div class="input-group mb-3 position-relative">
+                            <span class="input-group-text" id="username-field">Username</span>
+                            <input type="text" class="form-control" placeholder="sample" aria-label="Username"
+                                style="border-radius: 0.375rem !important;" aria-describedby="username-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-check-circle-fill position-absolute" viewBox="0 0 16 16"
+                                style="top: 25%; right: 2%; color: #7f8c8d;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </div>
+                        <div class="input-group mb-3 position-relative">
+                            <span class="input-group-text" id="password-field-">Password</span>
+                            <input type="text" class="form-control" placeholder="sample" aria-label="Password"
+                                style="border-radius: 0.375rem !important;" aria-describedby="password-field">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-check-circle-fill position-absolute" viewBox="0 0 16 16"
+                                style="top: 25%; right: 2%; color: #7f8c8d;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="reenter-password-field">Re-enter Password</span>
+                            <input type="text" class="form-control" placeholder="sample" aria-label="Username"
+                                aria-describedby="reenter-password-field" style="border-radius: 0.375rem !important;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-check-circle-fill position-absolute" viewBox="0 0 16 16"
+                                style="top: 25%; right: 2%; color: #7f8c8d;">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </div>
+                        <div class="row" style="display: flex; justify-content: flex-end; margin-bottom: 0;">
+                            <button class="btn btn-primary w-25" onclick="navigateToMainWebPage()">FINISH</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
     </main>
 

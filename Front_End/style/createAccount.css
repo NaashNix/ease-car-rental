@@ -11,7 +11,9 @@
     width: 100%;
 }
 
-#create-account-form-parent, #id-upload-form-parent{
+#create-account-form-parent, 
+#id-upload-form-parent,
+#credential-setting-form{
     margin-top: 6rem;
     /* margin-bottom: 10rem; */
     margin-left: 10rem;
@@ -33,7 +35,8 @@
 }
 
 #create-account-form-parent .container-fluid h4,
-#id-upload-form-parent .container-fluid h4
+#id-upload-form-parent .container-fluid h4,
+#credential-setting-form .container-fluid h4
 {
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
