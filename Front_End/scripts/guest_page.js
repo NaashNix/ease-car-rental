@@ -22,7 +22,9 @@ const redirectToLoginProcess = (username,password) => {
         data: "",
         success: function (response) {
             console.log(response);
-
+            if  (response.data != null){
+                window.location.href = "/application.html";
+            }
             // redirect to the place order form.
         }
     });
