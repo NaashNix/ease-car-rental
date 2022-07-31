@@ -17,9 +17,9 @@ function getAllCarsFromServer() {
 }
 
 function bindClickEvents() {
-    $("#order-placing-form-container").click(function () {
+    $("#order-placing-form-container button").click(function () {
         //Get values from the selected row
-        let id = $(this);
+        let id = $(this).parent().find('span').text();
         // let name = $(this).children().eq(1).text();
         //Set values to the text-fields
         console.log("ID is : ",id);
