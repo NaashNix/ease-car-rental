@@ -63,6 +63,7 @@
   -o-transition: 1s;
   transition: 1s;
   opacity: 0;
+  display: none;
 }
 
 .verticalIntro{

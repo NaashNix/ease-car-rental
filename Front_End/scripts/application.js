@@ -1,3 +1,8 @@
+const carSelectForm = $("#car-select-form");
+const carSelectFormContainer = $("#car-select-form-container");
+const basicOrderDetailsForm = $("#basic-order-details-form");
+
+basicOrderDetailsForm.css('display','none');
 
 getAllCarsFromServer();
 
@@ -17,12 +22,13 @@ function getAllCarsFromServer() {
 }
 
 function bindClickEvents() {
-    $("#order-placing-form-container button").click(function () {
-        //Get values from the selected row
-        let id = $(this).parent().find('span').text();
-        // let name = $(this).children().eq(1).text();
-        //Set values to the text-fields
+    $( carSelectFormContainer,"button").click(function () {
+        
+        let id = $(this).parent().find('#car-reference-number').text();
         console.log("ID is : ",id);
+        localStorage.setItem('carID', id);
+        redirectToPlacingOrderForm();
+
     });
 }
 
@@ -40,6 +46,13 @@ function carViewComponent(car) {
 function addCars(cars) {
 
     console.log(cars);
-    $("#order-placing-form-container").append(carViewComponent(cars));
+    carSelectFormContainer.append(carViewComponent(cars));
+    
     bindClickEvents();
+}
+
+function redirectToPlacingOrderForm(){
+    carSelectForm.addClass('horizTranslate');
+    // setTimeout(() => { carSelectForm.css('display', 'none'); }, 700);
+    basicOrderDetailsForm.addClass('verticalIntro');
 }
