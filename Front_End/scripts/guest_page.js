@@ -26,6 +26,9 @@ const redirectToLoginProcess = (username,password) => {
                 window.location.href = "/application.html";
             }
             // redirect to the place order form.
+        },
+        error:function (er){
+            alert('Server Not Responding.');
         }
     });
 }

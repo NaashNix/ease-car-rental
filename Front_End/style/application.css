@@ -53,6 +53,36 @@
   height: 30rem;
 }
 
+.carTypeLUX {
+  background-color: #eeba0b;
+  color: black;
+  display: inline !important;
+}
+
+.carTypeGEN {
+  background-color: #27ae60;
+  color: black;
+  display: inline !important;
+}
+
+.carTypePRM {
+  background-color: #2980b9;
+  color: black;
+  display: inline !important;
+}
+
+
+.carTypeComponent {
+  margin-left: 0.4rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding: 0.3rem;
+  line-height: 0.7;
+  border-radius: 0.5rem;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
 .horizTranslate {
   -webkit-transition: 1s;
   -moz-transition: 1s;
