@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 #background-image {
   position: absolute;
   z-index: -1;
@@ -71,7 +73,6 @@
   display: inline !important;
 }
 
-
 .carTypeComponent {
   margin-left: 0.4rem;
   margin-top: 0.7rem;
@@ -98,11 +99,61 @@
 }
 
 #basic-order-details-form {
-  margin-top: 6rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  background-color: white;
-  opacity: 0.75;
-  padding: 0.5rem;
-  border-radius: 1.2rem;
+  /* margin-top: rem; */
+  /* margin-left: 10rem; */
+  /* margin-right: 10rem; */
+  background-color: #ced6e0;
+  /* opacity: 0.75; */
+  /* padding: 0.5rem; */
+
+  padding-top: 3rem;
+
+  /* border-radius: 1.2rem; */
+}
+
+#basic-order-details-form-main-parent {
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+
+#customer-details-container {
+  background: #ecf0f1;
+  border-radius: 1.5rem;
+  border: #2c3e50 1px solid;
+  filter: drop-shadow(1px 1px 4px #2d3436);
+}
+
+#basic-order-field-container {
+  background: #ecf0f1;
+  border-radius: 1.5rem;
+  border: #2c3e50 1px solid;
+  filter: drop-shadow(1px 1px 4px #2d3436);
+}
+
+.car-image-container {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+#car-information-container {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  /* height: 100%; */
+  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#car-information-container div{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#devider{
+  
 }

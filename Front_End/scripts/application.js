@@ -1,8 +1,10 @@
 const carSelectForm = $("#car-select-form");
 const carSelectFormContainer = $("#car-select-form-container");
 const basicOrderDetailsForm = $("#basic-order-details-form");
+const carSelectContainer = $('#car-select-form');
 
-basicOrderDetailsForm.css('display', 'none');
+carSelectContainer.css('display', 'none');
+// basicOrderDetailsForm.css('display', 'none');
 
 getAllCarsFromServer();
 
@@ -58,7 +60,7 @@ function carViewComponent(car) {
                     <h3 "style="margin-bottom: 0 !important; line-height: 1.5;display:inline !important">${car.brand}</h3>
                     <div id="carTypeContainer" style="display:none;" class="carTypeComponent ${carTypeOuter}">${car.carType}</div>
                     </div>
-                    <span>${car.noOfPassengers} Persons | ${car.carType} | ${car.fuelType}</span>
+                    <span>${car.noOfPassengers} Persons | ${car.transmissionType} | ${car.fuelType}</span>
                     <button class="btn btn-dark" type="button">RENT THIS</button>
                     <span style="display:none" id="car-reference-number">${car.carID}</span>
             </div>`;
@@ -68,8 +70,6 @@ function addCars(cars) {
 
     console.log(cars);
     carSelectFormContainer.append(carViewComponent(cars));
-    
-
     bindClickEvents();
 }
 

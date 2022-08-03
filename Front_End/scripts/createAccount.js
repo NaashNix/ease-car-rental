@@ -2,6 +2,7 @@ const basicInfoForm = $("#create-account-form-parent");
 const imageUploadForm = $("#id-upload-form-parent");
 const credentialSettingForm = $("#credential-setting-form");
 
+
 let x = 0;
 if (x == 0) {
     imageUploadForm.css('display', 'none');
@@ -43,7 +44,6 @@ function getAge(dateString) {
 
 function saveCustomerAfterValidation(){
 
-    // var customerID = '';
 
     $.ajax({
         type: "GET",
