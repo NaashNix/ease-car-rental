@@ -98,17 +98,11 @@
   display: block !important;
 }
 
-#basic-order-details-form {
-  /* margin-top: rem; */
-  /* margin-left: 10rem; */
-  /* margin-right: 10rem; */
+#basic-order-details-form{
+  
   background-color: #ced6e0;
-  /* opacity: 0.75; */
-  /* padding: 0.5rem; */
-
   padding-top: 3rem;
 
-  /* border-radius: 1.2rem; */
 }
 
 #basic-order-details-form-main-parent {
@@ -123,7 +117,7 @@
   filter: drop-shadow(1px 1px 4px #2d3436);
 }
 
-#basic-order-field-container {
+#basic-order-field-container{
   background: #ecf0f1;
   border-radius: 1.5rem;
   border: #2c3e50 1px solid;
@@ -141,8 +135,6 @@
 #car-information-container {
   margin-left: 1.5rem;
   margin-top: 2rem;
-  /* height: 100%; */
-  /* justify-content: space-between; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -155,5 +147,36 @@
 }
 
 #devider{
-  
+  width: 1px;
+  height: 80%;
+  opacity: 0.6;
+  align-self: center;
+  background: #2d3436;
+  margin-left: 8rem;
+}
+
+#basic-order-field-container th,
+#basic-order-field-container td{
+  border: 1px solid;
+  padding: 0.3rem;
+}
+
+#basic-order-field-container table{
+  border: 1px solid;
+  height: fit-content;
+  margin-left: 1.5rem;
+  align-self: center;
+
+}
+
+#order-information-parent{
+  background-color: #ced6e0;
+  padding-top: 2.5rem;
+}
+
+#order-information-parent>div{
+  background: #ecf0f1;
+  border-radius: 1.5rem;
+  border: #2c3e50 1px solid;
+  filter: drop-shadow(1px 1px 4px #2d3436);
 }
