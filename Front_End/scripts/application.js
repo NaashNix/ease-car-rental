@@ -109,7 +109,7 @@ function placingOrderFormFlow() {
 }
 
 function setDataToCustomerDetailsForm() {
-    console.log('setDataToCustomerDetailsForm()');
+    $('#car-rate-table').empty();
     customerNameField.text(localStorage.getItem('userName'));
     customerAddressField.text(localStorage.getItem('userAddress'));
     customerEmailField.text(localStorage.getItem('userEmail'));
@@ -128,7 +128,7 @@ function setDataToCustomerDetailsForm() {
             carColorField.text(response.data.color);
             fuelTypeField.text(response.data.fuelType);
             passengerCountField.text(response.data.noOfPassengers + ' Persons');
-            $('#car-rate-table tbody').remove();
+            $('#car-rate-table').empty();
             setDataToRateTable('Daily', response.data.dailyRate, '30 Days');
             setDataToRateTable('Monthly', response.data.monthlyRate, '30 Days');
             $('#car-rate-table').append(
@@ -145,6 +145,7 @@ function loadCarDetailsToTheForm() {
 }
 
 function setDataToRateTable(package, rate, time) {
+    
     let row = `<tr><td>${package}</td><td>Rs. ${rate}</td><td>${time}</td></tr>`;
     $('#car-rate-table').append(row);
 }
