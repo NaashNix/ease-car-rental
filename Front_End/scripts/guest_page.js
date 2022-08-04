@@ -23,6 +23,11 @@ const redirectToLoginProcess = (username,password) => {
         success: function (response) {
             console.log(response);
             if  (response.data != null){
+                localStorage.setItem('userID', response.data.customerID);
+                localStorage.setItem('userName', response.data.fullName);
+                localStorage.setItem('userEmail', response.data.email);
+                localStorage.setItem('userAddress', response.data.address);
+                localStorage.setItem('userTelephone', response.data.telephone);
                 window.location.href = "/application.html";
             }
             // redirect to the place order form.

@@ -85,7 +85,7 @@
     </div> -->
 
     <main>
-        <section id="car-select-form">
+        <section id="car-select-form" >
 
             <div class="" style="display: flex; flex-wrap: wrap;" id="car-select-form-container">
 
@@ -123,7 +123,7 @@
                             <button class="btn btn-dark" type="button">RENT THIS</button>
                         </div>
                      -->
-
+ 
 
             </div>
         </section>
@@ -152,8 +152,8 @@
                             </div>
                             <div class="row">
                                 <div class="d-flex mb-3 flex-column align-items-center">
-                                    <span class="h5 mb-0" style="line-height: 0.9;">Ravindu Thilakshana</span>
-                                    <span class="mt-0">Panadura</span>
+                                    <span id="customer-name-field" class="h5 mb-0" style="line-height: 0.9;">Ravindu Thilakshana</span>
+                                    <span id="customer-address-field" class="mt-0">Panadura</span>
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-envelope-open-fill mr-3"
@@ -162,7 +162,7 @@
                                                 d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z" />
                                         </svg>
 
-                                        <span style="margin-left: 0.5rem;"> thilakshanaravindu@gmail.com </span>
+                                        <span id="customer-email-field" style="margin-left: 0.5rem;"> thilakshanaravindu@gmail.com </span>
 
                                     </div>
                                     <div>
@@ -172,7 +172,7 @@
                                                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                                         </svg>
 
-                                        <span style="margin-left: 0.5rem;"> +(94) 70 20 53 777 </span>
+                                        <span id="customer-telephone-field" style="margin-left: 0.5rem;"> +(94) 70 20 53 777 </span>
 
                                     </div>
                                 </div>
@@ -193,36 +193,37 @@
                                 <div id="car-information-container">
                                     <div>
                                         <img src="./res/images/icons/icons8-car-60.png" style="width: 40px;" />
-                                        <label for="" style="font-family: 'Inter',sans-serif; font-weight: 700;">TOYOTA
+                                        <label id="car-name-field" for="" style="font-family: 'Inter',sans-serif; font-weight: 700;">TOYOTA
                                             Camry</label>
                                     </div>
                                     <div>
                                         <img src="./res/images/icons/icons8-queue-50.png" style="width: 40px;" />
-                                        <label for="" style="font-family: 'Inter',sans-serif; font-weight: 700;">5
+                                        <label id="passenger-count-field" for="" style="font-family: 'Inter',sans-serif; font-weight: 700;">5
                                             Passengers</label>
                                     </div>
                                     <div>
                                         <img src="./res/images/icons/icons8-gear-60.png" style="width: 40px;" />
-                                        <label for=""
+                                        <label for="" id="gear-type-field"
                                             style="font-family: 'Inter',sans-serif; font-weight: 700;">MANUAL</label>
                                     </div>
                                     <div>
                                         <img src="./res/images/icons/icons8-silver-medal-50.png" style="width: 40px;" />
-                                        <label for=""
+                                        <label for="" id="car-type-field"
                                             style="font-family: 'Inter',sans-serif; font-weight: 700;">GENERAL</label>
                                     </div>
                                     <div>
                                         <img src="./res/images/icons/icons8-fuel-60.png" style="width: 40px;" />
-                                        <label for=""
+                                        <label for="" id="fuel-type-field"
                                             style="font-family: 'Inter',sans-serif; font-weight: 700;">DIESEL</label>
+                                    </div>
+                                    <div>
+                                        <img src="./res/images/icons/icons8-color-65.png" style="width: 40px;" />
+                                        <label for="" id="car-color-field" style="font-family: 'Inter',sans-serif; font-weight: 700;">NAVY
+                                            BLUE</label>
                                     </div>
                                 </div>
 
-                                <div id="devider">
-
-                                </div>
-
-                                <table>
+                                <table id="car-rate-table">
                                     <thead>
                                         <tr>
                                             <th>PACKAGE</th>
@@ -231,21 +232,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Yearly</td>
-                                            <td>Rs. 1500.00</td>
-                                            <td>365 Days</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Monthly</td>
-                                            <td>Rs. 1500.00</td>
-                                            <td>365 Days</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Daily</td>
-                                            <td>Rs. 1500.00</td>
-                                            <td>365 Days</td>
-                                        </tr>
+                                            
                                     </tbody>
                                 </table>
 
@@ -255,45 +242,67 @@
                     </div>
                 </div>
             </div>
-
-        </section>
-
-        <section id="order-information-parent">
-            <div class="container" style="padding: 1.5rem;">
-                <div class="row">
-                    <div class="col">
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">PICKUP DATE</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="addon-wrapping">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">RETURN DATE</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="addon-wrapping">
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col">
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">PICKUP TIME</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="addon-wrapping">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">RETURN TIME</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="addon-wrapping">
-                        </div>
-                    </div>
+<section id="order-information-parent" class="mb-lg-5">
+    <div class="container" style="padding: 1.5rem; margin-bottom: 3rem !important;">
+        <h3 class="mt-1"
+            style=" margin-left:1.5rem !important; margin-bottom: 1rem; font-weight: 300; font-family: 'Roboto',sans-serif;">
+            ORDER INFORMATION</h3>
+        <div class="row">
+            <div class="col">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">PICKUP DATE</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
                 </div>
             </div>
+            <div class="col">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">RETURN DATE</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">PICKUP TIME</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">RETURN TIME</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            With Driver
+                        </label>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div>
+                        <span style="font-family: 'Roboto',sans-serif; font-weight: 700;">Rough Charge for the your
+                            requirement : </span>
+                        <span style="color: red;">Rs. 89 600</span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-success">NEXT</button>
+                </div>
+            </div>
+        </div>
+</section>
         </section>
+
+        
 
     </main>
 
