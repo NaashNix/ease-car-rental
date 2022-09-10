@@ -24,7 +24,6 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 public class JPAConfig {
-
     @Autowired
     Environment env;
 

@@ -12,6 +12,12 @@ const gearTypeField = $('#gear-type-field');
 const carTypeField = $('#car-type-field');
 const fuelTypeField = $('#fuel-type-field');
 const carColorField = $('#car-color-field');
+const pickupDateField = $('pickup-date-field');
+const returnDateField = $('return-date-field');
+const pickupTimeField = $('#pickup-time-field');
+const returnTimeField = $('#return-time-field');
+const withDriverCheckBox = $('#with-driver-checkBox');
+const roughCharge = $('#rough-charge-field');
 
 
 
@@ -55,8 +61,6 @@ function bindClickEvents() {
 
 function carViewComponent(car) {
 
-    console.log('carViewComponent(car)');
-
     const carTypeClasses = {
         LUX: 'carTypeLUX',
         GEN: 'carTypeGEN',
@@ -88,7 +92,6 @@ function carViewComponent(car) {
 
 function addCars(cars) {
 
-    console.log('addCars ()');
     carSelectFormContainer.append(carViewComponent(cars));
     bindClickEvents();
     
@@ -139,13 +142,9 @@ function setDataToCustomerDetailsForm() {
     });
 }
 
-
-function loadCarDetailsToTheForm() {
-
-}
-
 function setDataToRateTable(package, rate, time) {
     
     let row = `<tr><td>${package}</td><td>Rs. ${rate}</td><td>${time}</td></tr>`;
     $('#car-rate-table').append(row);
 }
+

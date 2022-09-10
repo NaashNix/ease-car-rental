@@ -9,6 +9,7 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
 
@@ -49,6 +50,15 @@ public class CarServiceImpl implements CarService {
             repo.deleteById(carID);
         }else{
             throw new RuntimeException("Car ID is invalid");
+        }
+    }
+
+
+    public CarDTO searchCar(String carID){
+        if (repo.existsById(carID)){
+            return mapper.map(repo.findById(carID).get(),CarDTO.class);
+        }else {
+            throw new RuntimeException("Car not found!");
         }
     }
 }

@@ -15,7 +15,13 @@ function loginButtonClicked() {
 
 }
 
+var url = 'application.html';
+
+
 const redirectToLoginProcess = (username,password) => {
+
+    
+
     $.ajax({
         type: "GET",
         url: `http://localhost:8080/easy-car/app/login?username=${username}&password=${password}`,
@@ -28,14 +34,16 @@ const redirectToLoginProcess = (username,password) => {
                 localStorage.setItem('userEmail', response.data.email);
                 localStorage.setItem('userAddress', response.data.address);
                 localStorage.setItem('userTelephone', response.data.telephone);
-                window.location.href = "/application.html";
+                window.location.href = url;
             }
-            // redirect to the place order form.
         },
         error:function (er){
-            alert('Server Not Responding.');
+            alert('Server Not Responding.'+er);
         }
     });
+
+    // $(location).attr('href', url);
+    
 }
 
 

@@ -65,19 +65,19 @@ body {
 
 .carTypeLUX {
   background-color: #eeba0b;
-  color: black;
+  color: white;
   display: inline !important;
 }
 
 .carTypeGEN {
   background-color: #27ae60;
-  color: black;
+  color: white;
   display: inline !important;
 }
 
 .carTypePRM {
   background-color: #2980b9;
-  color: black;
+  color: white;
   display: inline !important;
 }
 
