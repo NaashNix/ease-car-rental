@@ -11,6 +11,10 @@ if (x == 0) {
     x = 1;
 }
 
+array.forEach(element => {
+    
+});
+
 function loadIdImageUploadPage() {
     basicInfoForm.addClass('horizTranslate');
     setTimeout(() => { basicInfoForm.css('display', 'none'); }, 700);

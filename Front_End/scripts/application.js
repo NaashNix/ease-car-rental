@@ -71,7 +71,7 @@ function carViewComponent(car) {
 
     if (car.carType == 'LUX') {
         carTypeOuter = carTypeClasses.LUX;
-    } else if (car.carType == 'GEN') {
+    } else if (car.carType == 'GEN') { 
         carTypeOuter = carTypeClasses.GEN;
     } else {
         carTypeOuter = carTypeClasses.PRM;
